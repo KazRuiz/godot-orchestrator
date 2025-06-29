@@ -140,6 +140,10 @@ TARGET_COMPILE_OPTIONS(${PROJECT_NAME} PUBLIC
                 -Wno-ignored-attributes
                 -Wno-unknown-attributes
             >
+
+            # Add this flag specifically for Android ARMv7a builds to prevent alignment faults
+            $<$<AND:$<PLATFORM_ID:Android>,$<STREQUAL:${CMAKE_ANDROID_ARCH_ABI},"armeabi-v7a">>:-mno-unaligned-access>
+            
             $<$<CONFIG:Debug>:
                 -g
                 -fno-omit-frame-pointer
