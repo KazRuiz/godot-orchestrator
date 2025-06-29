@@ -63,7 +63,7 @@
         "CMAKE_TOOLCHAIN_FILE": "$env{ANDROID_NDK}/build/cmake/android.toolchain.cmake",
         "ANDROID_TOOLCHAIN_NAME": "arm-linux-androideabi-4.9",
         "ANDROID_PLATFORM": "android-21",
-        "ANDROID_NATIVE_API_LEVEL": "21",  // <--- ADD THIS LINE
+        "ANDROID_NATIVE_API_LEVEL": "21", 
         "ANDROID_TOOLCHAIN": "clang",
         "CMAKE_C_COMPILER_LAUNCHER": "ccache",
         "CMAKE_CXX_COMPILER_LAUNCHER": "ccache"
@@ -73,12 +73,13 @@
       "name": "armeabi-v7a",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-mno-unaligned-access",
         "CMAKE_ANDROID_ARCH_ABI": "armeabi-v7a",
         "ANDROID_ABI": "armeabi-v7a",
         "CMAKE_TOOLCHAIN_FILE": "$env{ANDROID_NDK}/build/cmake/android.toolchain.cmake",
         "ANDROID_TOOLCHAIN_NAME": "arm-linux-androideabi-4.9",
         "ANDROID_PLATFORM": "android-21",
-        "ANDROID_NATIVE_API_LEVEL": "21",  // <--- ADD THIS LINE
+        "ANDROID_NATIVE_API_LEVEL": "21",
         "ANDROID_TOOLCHAIN": "clang",
         "CMAKE_C_COMPILER_LAUNCHER": "ccache",
         "CMAKE_CXX_COMPILER_LAUNCHER": "ccache"
