@@ -86,6 +86,13 @@ jobs:
         with:
           key: ccache-${{ matrix.identifier }}
 
+      - name: Clean previous builds
+        shell: sh
+        run: |
+          rm -rf ${{ github.workspace }}/.out-${{ matrix.identifier }}
+          rm -rf ${{ github.workspace }}/project/addons/orchestrator/lib
+          rm -rf ${{ github.workspace }}/project/addons/orchestrator/orchestrator.*
+
       - name: Generate Build Files (${{ matrix.identifier }})
         shell: sh
         run: |
