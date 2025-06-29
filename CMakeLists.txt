@@ -163,17 +163,17 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}/_generated)
 TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 IF (NOT APPLE)
-    # Linker options for the GDExtension library
-    TARGET_LINK_OPTIONS(${PROJECT_NAME} PRIVATE
-        $<$<NOT:${compiler_is_msvc}>:
-            -static-libgcc
-            -static-libstdc++
-            -Wl,-R,'$$ORIGIN'
+    # Linker options for the GDExtension library
+    TARGET_LINK_OPTIONS(${PROJECT_NAME} PRIVATE
+        $<$<NOT:${compiler_is_msvc}>:
+            -static-libgcc
+            -static-libstdc++
+            -Wl,-R,'$$ORIGIN'
             $<$<PLATFORM_ID:Android>:-Wl,--hash-style=sysv> # <--- ADD THIS LINE HERE
-            $<$<CONFIG:Release>:
-                $<$<PLATFORM_ID:Android>:-s>
-            >
-        >)
+            $<$<CONFIG:Release>:
+                $<$<PLATFORM_ID:Android>:-s>
+            >
+        >)
 ENDIF ()
 
 IF (AUTOFORMAT_SRC_ON_CONFIGURE MATCHES ON)
