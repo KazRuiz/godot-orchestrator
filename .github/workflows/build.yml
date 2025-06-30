@@ -82,6 +82,7 @@ jobs:
         uses: ./.github/actions/base-deps
 
       - name: Install ccache
+        if: matrix.identifier != 'android-arm32'
         uses: hendrikmuhs/ccache-action@v1.2
         with:
           key: ccache-${{ matrix.identifier }}

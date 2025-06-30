@@ -73,7 +73,7 @@
       "name": "armeabi-v7a",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS": "-mno-unaligned-access",
+        "CMAKE_CXX_FLAGS": "-mno-unaligned-access -fno-unroll-loops -fno-tree-vectorize",
         "CMAKE_ANDROID_ARCH_ABI": "armeabi-v7a",
         "ANDROID_ABI": "armeabi-v7a",
         "CMAKE_TOOLCHAIN_FILE": "$env{ANDROID_NDK}/build/cmake/android.toolchain.cmake",
