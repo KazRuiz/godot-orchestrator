@@ -80,9 +80,7 @@
         "ANDROID_TOOLCHAIN_NAME": "arm-linux-androideabi-4.9",
         "ANDROID_PLATFORM": "android-21",
         "ANDROID_NATIVE_API_LEVEL": "21",
-        "ANDROID_TOOLCHAIN": "clang",
-        "CMAKE_C_COMPILER_LAUNCHER": "ccache",
-        "CMAKE_CXX_COMPILER_LAUNCHER": "ccache"
+        "ANDROID_TOOLCHAIN": "clang"
       }
     }
   ]
